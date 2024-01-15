@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+
+<title>Node Application</title>
+
+<script>
+
+    function handleSaveTask () {
+
+        var ulEl = document.getElementById("tasks")
+        var inputEl = document.getElementById("task")
+
+        var liEl = document.createElement("li")
+        liEl.textContent = inputEl.value
+        ulEl.appendChild (liEl)
+
+        inputEl.value = "";
+
+
+    }
+
+</script>
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    
+    <div>
+
+        <label>Add Task</label>
+        <input id="task" type="text" placeholder="new task"/>
+        <button onclick="handleSaveTask()">Save</button>
+
+        <ul id="tasks"></ul>
+    
+    </div>
+
+</body>
